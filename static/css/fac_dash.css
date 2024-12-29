@@ -1,0 +1,157 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+}
+
+.sidebar {
+    height: 100vh;
+    background-color: #091a2c;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    width: 270px;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+}
+
+.sidebar h2 {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ffc107;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+text-decoration: none;
+color: white;
+display: block;
+padding: 6px 12px;
+border-radius: 5px;
+font-weight: bold;
+font-size: 0.9rem; 
+margin-bottom: 10px; 
+}
+
+.sidebar ul li a:hover {
+background-color: #ffc107;
+color: black;
+}
+
+
+.profile-card {
+    background-color: transparent;
+    text-align: center;
+    margin-bottom: 30px; 
+    padding: 10px;
+}
+
+.profile-card img {
+    border-radius: 50%;
+    width: 80px; 
+    height: 80px; 
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.profile-card h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: white; /* White color to blend with sidebar */
+}
+
+.profile-card p {
+    color: #6c757d;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.profile-card a {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 6px 15px;
+    background-color: #ffc107;
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.profile-card a:hover {
+    background-color: #e0a800;
+}
+
+.content {
+    margin-left: 270px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Dashboard Header Styling */
+.dashboard-header {
+    background-color: #343a40;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    width: 100%;
+}
+
+.dashboard-header h3 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.dashboard-section {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1 1 48%;
+}
+
+.dashboard-section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: #343a40;
+}
+
+.dashboard-section .card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.dashboard-section .card h5 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #343a40;
+}
+
+.dashboard-section .card p {
+    color: #6c757d;
+}
+
+footer {
+    margin-top: 30px;
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+}

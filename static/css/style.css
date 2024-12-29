@@ -1,0 +1,143 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fc;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Table Styles */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table th,
+.table td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #ff6f61; /* Vibrant header */
+    color: white;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: #fff2e6; /* Soft pink for odd rows */
+}
+
+.table tbody tr:hover {
+    background-color: #ffe0b3; /* Light orange on hover */
+}
+
+/* Container Styles */
+.container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-top: 30px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #17a2b8; /* Teal color for navbar */
+}
+
+.navbar .navbar-brand {
+    color: white;
+}
+
+.navbar .nav-link {
+    color: white;
+}
+
+.navbar .nav-link:hover {
+    color: #ff6f61; /* Hover color for links */
+}
+
+/* Welcome Section */
+.welcome-section {
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient background */
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.welcome-section h1 {
+    font-size: 36px;
+}
+
+.welcome-section p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* Button Styles */
+.btn {
+    background-color: #ff6f61; /* Bright button color */
+    color: white;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #ff8f80; /* Slightly darker color on hover */
+}
+
+/* Card Styles */
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #ff6f61; /* Vibrant header color */
+    color: white;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* Quick Actions Section */
+.quick-actions a {
+    background-color: #ff6f61;
+    color: white;
+}
+
+.quick-actions a:hover {
+    background-color: #feb47b;
+}
+.social-icons a {
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+    color: #f1c40f; /* Change color to a goldish shade */
+    transform: scale(1.2); /* Slightly enlarge the icon */
+}

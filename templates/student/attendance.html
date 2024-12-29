@@ -1,0 +1,73 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Details - Royal College</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-top: 50px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #343a40;
+            margin-bottom: 20px;
+        }
+
+        .attendance-table {
+            margin-top: 20px;
+        }
+
+        .back-btn {
+            margin: 20px 0;
+            display: inline-block;
+            background-color: #6c757d; 
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .back-btn:hover {
+            background-color: #585f64;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container my-5">
+    <h1 class="text-center">Attendance Details for {{ student.full_name }}</h1>
+
+    <a href="/stddash/" class="back-btn">Back to Dashboard</a>
+
+    {% if attendance_summary %}
+        <div class="attendance-table">
+            {% for record in attendance_summary %}
+                <h3>{{ record.month }}</h3>
+                <p>Dates Present: {{ record.dates|join:", " }}</p>
+                <p>Total Attendance: {{ record.count }}</p>
+                <hr>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p class="text-center mt-4">No attendance records found.</p>
+    {% endif %}
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

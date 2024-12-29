@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fee Records</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Fee Records</h1>
+        
+        <a href="{% url 'student_options' %}" class="btn btn-secondary mb-3">Back to Student Management</a>
+        
+        <a href="{% url 'add_fee' %}" class="btn btn-success mb-3">Add New Fee Record</a>
+        
+        <!-- Table Section -->
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Student</th>
+                    <th>Total Fee</th>
+                    <th>Paid Fee</th>
+                    <th>Due Fee</th>
+                    <th>Due Date</th> <!-- Added column -->
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for record in fee_records %}
+                <tr>
+                    <td>{{ record.id }}</td>
+                    <td>{{ record.student.full_name }}</td>
+                    <td>₹{{ record.total_fee }}</td>
+                    <td>₹{{ record.paid_fee }}</td>
+                    <td>₹{{ record.due_fee }}</td>
+                    <td>{{ record.due_date|date:"d M Y" }}</td> 
+                    <td>
+                        <a href="{% url 'edit_fee' record.id %}" class="btn btn-warning btn-sm">Edit</a>
+                        <a href="{% url 'delete_fee' record.id %}" class="btn btn-danger btn-sm" 
+                           onclick="return confirm('Are you sure you want to delete this record?');">Delete</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions Portal - Royal College</title>
+    <link rel="stylesheet" href="{% static 'css/admission.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">Royal College</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="/homepage/">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#applicationForm">Apply</a></li>
+                <li class="nav-item"><a class="nav-link" href="/courses/">Courses</a></li>
+                <li class="nav-item"><a class="nav-link" href="#chatSupport">Help</a></li>
+                <li class="nav-item"><a class="nav-link" href="#footer">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Header Section -->
+<div class="header-section text-center text-white bg-primary py-5">
+    <h1 class="display-4">Admissions Portal</h1>
+    <p class="lead">Join Royal College and take the first step towards a brighter future.</p>
+    <a href="/courses/" class="btn btn-dark text-white mt-3">Courses</a>
+    <a href="#applicationForm" class="btn btn-warning text-white mt-3">Get Started</a>
+</div>
+
+<div class="container my-5">
+    <!-- Application Form -->
+    <div id="applicationForm" class="form-section bg-light p-4 rounded shadow">
+        <h3 class="mb-4 text-center text-primary">Application Form</h3>
+        <form action="/admission/" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            
+            <!-- Personal Details -->
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="fullName" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" name="full_name" id="fullName" placeholder="Your Full Name" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="dob" class="form-label">Date of Birth</label>
+                    <input type="date" class="form-control" name="dob" id="dob" value="{{ form_data.dob|default:'' }}" required>
+                    <small id="dobError" class="text-danger"></small>
+                </div>                
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" name="email" id="email"
+                           placeholder="Your Email" required oninput="validateField('email')">
+                    <small id="emailError" class="text-danger"></small>
+                </div>
+                <div class="col-md-6">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control" name="phone" id="phone"
+                           placeholder="Your Phone Number" required oninput="validateField('phone')">
+                    <small id="phoneError" class="text-danger"></small>
+                </div>                
+            </div>
+            
+            
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="gender" class="form-label">Gender</label>
+                    <select class="form-control" name="gender" id="gender" required>
+                        <option value="" disabled selected>Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="nationality" class="form-label">Nationality</label>
+                    <input type="text" class="form-control" name="nationality" id="nationality" placeholder="Your Nationality" required>
+                </div>
+            </div>
+            
+            <div class="row mb-3">
+                <div class="col-md-12">
+                    <label for="address" class="form-label">Address</label>
+                    <textarea class="form-control" name="address" id="address" rows="3" placeholder="Your Address" required></textarea>
+                    <small id="addressError" class="text-danger"></small>
+                </div>
+            </div>
+            
+            
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="academicDetails" class="form-label">Academic Details</label>
+                    <textarea class="form-control" name="academic_details" id="academicDetails" rows="3" placeholder="Your Academic Details" required></textarea>
+                </div>
+                <div class="col-md-6">
+                    <label for="course" class="form-label">Course Applying For</label>
+                    <select class="form-control" name="course" id="course" required>
+                        <option value="" disabled selected>Select Course</option>
+                        <option value="BTech CSE">Computer science Engineering</option>
+                        <option value="BTech CE">Civil Engineering</option>
+                        <option value="BTech EEE">Electrical and Electronics Engineering</option>
+                        <option value="BTech Marine">Marine Engineering</option>
+                        <option value="BTech AI& ML">AI & ML Engineering</option>
+                        <option value="BTech Robotics">Robotics Engineering</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="row mb-3">
+                <div class="col-md-12">
+                    <label for="documents" class="form-label">Upload any Id proof</label>
+                    <input type="file" class="form-control" name="documents" id="documents" required>
+                </div>
+            </div>
+        
+            
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <button type="submit" class="btn btn-primary w-100 text-white">Submit Application</button>
+                </div>
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-secondary w-100 text-white" onclick="clearForm()">Clear</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Status Updates Section -->
+<div id="status" class="status-section bg-light py-5">
+    <div class="container">
+        <h3 class="text-center mb-4">Application Status</h3>
+        {% if messages %}
+            <div class="alert alert-success">
+                {% for message in messages %}
+                    <p>{{ message }}</p>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p class="text-center">No applications found yet. Please submit your application.</p>
+        {% endif %}
+    </div>
+</div>
+
+<!-- Chat Support Section -->
+<div id="chatSupport" class="chat-support bg-primary text-white py-5">
+    <div class="container text-center">
+        <h3>Need Help?</h3>
+        <p>Have questions? Chat with our support bot for real-time assistance.</p>
+        <button class="btn btn-warning" onclick="openChat()">Start Chat</button>
+    </div>
+</div>
+
+<!-- Chat Popup -->
+<div id="chatPopup" class="chat-popup">
+    <div class="chat-header">
+        <h5>Support Bot</h5>
+        <button class="btn-close" onclick="closeChat()"></button>
+    </div>
+    <div class="chat-body" id="chatBody"></div>
+    <div class="chat-footer">
+        <input type="text" id="userInput" class="form-control" placeholder="Type your message..." />
+        <button class="btn btn-primary" id="sendButton">Send</button>
+    </div>
+</div>
+
+<!-- Footer Section -->
+<footer id="footer" class="footer-section bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>About Royal College</h5>
+                <p>Royal College offers top-notch education in various fields. Apply now for a brighter future.</p>
+            </div>
+            <div class="col-md-4">
+                <h5>Contact Us</h5>
+                <p>Email: info@royalcollege.com</p>
+                <p>Phone: +123 456 7890</p>
+            </div>
+            <div class="col-md-4">
+                <h5>Follow Us</h5>
+                <a href="#" class="text-white me-2"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+<script src="{% static 'js/admission.js' %}"></script>
+
+</body>
+</html>
+{% endblock %}

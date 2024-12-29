@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Street View</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        #street-view {
+            height: 100vh; /* Full-screen view */
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="street-view"></div>
+
+    <script>
+        function initStreetView() {
+            // Specify coordinates for your campus location
+            const campusLocation = { lat: 37.7749, lng: -122.4194 }; // Replace with your coordinates
+
+            // Create a Street View Panorama
+            const panorama = new google.maps.StreetViewPanorama(
+                document.getElementById('street-view'),
+                {
+                    position: campusLocation, // Center at the specified coordinates
+                    pov: {
+                        heading: 165, // Direction the camera is facing
+                        pitch: 0,    // Tilt angle
+                    },
+                    zoom: 1, // Initial zoom level
+                }
+            );
+
+            // Add the Street View Panorama to the map
+            const map = new google.maps.Map(document.getElementById('street-view'), {
+                center: campusLocation,
+                zoom: 15,
+                streetView: panorama, // Link the panorama
+            });
+
+            // Link the map to the panorama
+            map.setStreetView(panorama);
+        }
+
+        // Initialize Street View when the page loads
+        window.onload = initStreetView;
+    </script>
+</body>
+</html>

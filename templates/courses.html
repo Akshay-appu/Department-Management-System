@@ -1,0 +1,139 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Catalog - Royal College</title>
+    <link rel="stylesheet" href="{% static 'css/course.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<!-- Header Section -->
+<div class="header-section">
+    <h1>Course Catalog</h1>
+    <p>Explore Our Courses and Start Your Journey at Royal College!</p>
+    <div class="header-buttons">
+        <a href="/homepage/" class="btn btn btn-dark">Home</a>
+        <a href="/admission/" class="btn btn-warning">Apply Now</a>
+    </div>
+    
+</div>
+
+<!-- Course Catalog Section -->
+<div class="container my-5">
+    <div class="row">
+        <!-- Course 1 -->
+        <div class="col-md-4">
+            <div class="course-card">
+                <h3>B.Tech in Computer Science</h3>
+                <p class="course-description">Learn the latest technologies and build the skills needed for a successful career in software development, AI, data science, and more!</p>
+                <ul>
+                    <li><strong>Prerequisites:</strong> High School Math, Physics, Computer Science Basics</li>
+                    <li><strong>Schedule:</strong> Monday - Friday, 9 AM - 3 PM</li>
+                </ul>
+                <a href="/admission/" class="btn btn-primary w-100">Apply Now</a>
+            </div>
+        </div>
+
+        <!-- Course 2 -->
+        <div class="col-md-4">
+            <div class="course-card">
+                <h3>B.Tech in Mechanical Engineering</h3>
+                <p class="course-description">Dive into the world of machinery, robotics, and innovation. Equip yourself with the skills to design and build the machines of tomorrow!</p>
+                <ul>
+                    <li><strong>Prerequisites:</strong> High School Math, Physics, Engineering Basics</li>
+                    <li><strong>Schedule:</strong> Monday - Friday, 9 AM - 3 PM</li>
+                </ul>
+                <a href="/admission/" class="btn btn-primary w-100">Apply Now</a>
+            </div>
+        </div>
+
+
+     <!-- B.Tech in Civil Engineering -->
+     <div class="col-md-4">
+        <div class="course-card">
+            <h3>B.Tech in Civil Engineering</h3>
+            <p class="course-description">Become a part of the field that builds the world's infrastructure. Learn about construction, design, and project management!</p>
+            <ul>
+                <li><strong>Prerequisites:</strong> High School Math, Physics, Engineering Basics</li>
+                <li><strong>Schedule:</strong> Monday - Friday, 9 AM - 3 PM</li>
+            </ul>
+            <a href="/admission/" class="btn btn-primary w-100">Apply Now</a>
+        </div>
+    </div>
+    
+    <!-- B.Tech in AI & ML -->
+    <div class="col-md-4">
+        <div class="course-card">
+            <h3>B.Tech in AI & ML</h3>
+            <p class="course-description">Master the science of artificial intelligence and machine learning. Work on cutting-edge projects that shape the future of technology!</p>
+            <ul>
+                <li><strong>Prerequisites:</strong> High School Math, Physics, Programming Basics</li>
+                <li><strong>Schedule:</strong> Monday - Friday, 9 AM - 3 PM</li>
+            </ul>
+            <a href="/admission/" class="btn btn-primary w-100">Apply Now</a>
+        </div>
+    </div>
+
+    <!-- B.Tech in Marine Engineering -->
+    <div class="col-md-4">
+        <div class="course-card">
+            <h3>B.Tech in Marine Engineering</h3>
+            <p class="course-description">Explore the world of maritime engineering and become an expert in ship design, navigation, and marine systems.</p>
+            <ul>
+                <li><strong>Prerequisites:</strong> High School Math, Physics</li>
+                <li><strong>Schedule:</strong> Monday - Friday, 9 AM - 3 PM</li>
+            </ul>
+            <a href="/admission/" class="btn btn-primary w-100">Apply Now</a>
+        </div>
+    </div>
+
+    <!-- B.Tech in Robotics -->
+    <div class="col-md-4">
+        <div class="course-card">
+            <h3>B.Tech in Robotics</h3>
+            <p class="course-description">Delve into the world of robotics, combining mechanical engineering, AI, and electronics to build the machines of the future!</p>
+            <ul>
+                <li><strong>Prerequisites:</strong> High School Math, Physics, Engineering Basics</li>
+                <li><strong>Schedule:</strong> Monday - Friday, 9 AM - 3 PM</li>
+            </ul>
+            <a href="/admission/" class="btn btn-primary w-100">Apply Now</a>
+        </div>
+    </div>
+</div>
+</div>
+<!-- About Section -->
+<div class="about-section text-center my-5">
+    <h2>Why Choose Royal College?</h2>
+    <p>We offer cutting-edge education with a focus on practical learning, providing students with the skills needed to excel in their careers.</p>
+    <div class="row">
+        <div class="col-md-4">
+            <i class="fas fa-university fa-3x mb-3"></i>
+            <h4>World-Class Infrastructure</h4>
+        </div>
+        <div class="col-md-4">
+            <i class="fas fa-chalkboard-teacher fa-3x mb-3"></i>
+            <h4>Experienced Faculty</h4>
+        </div>
+        <div class="col-md-4">
+            <i class="fas fa-users fa-3x mb-3"></i>
+            <h4>Student-Centric Community</h4>
+        </div>
+    </div>
+</div>
+
+<!-- Footer Section -->
+<div class="footer-section">
+    <div class="container text-center py-4">
+        <p>&copy; 2024 Royal College | All Rights Reserved</p>
+        <p><i class="fa-solid fa-phone"></i> 0494 234561 | <i class="fa-solid fa-envelope"></i> info@royalcollege.edu</p>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

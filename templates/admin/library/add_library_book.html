@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Add New Book</h1>
+        
+        <form method="POST" enctype="multipart/form-data">  <!-- Enable file upload -->
+            {% csrf_token %}
+            
+            <!-- Book Name -->
+            <div class="mb-3">
+                <label for="name" class="form-label">Book Name</label>
+                <input type="text" name="name" id="name" class="form-control" required>
+            </div>
+            
+            <!-- Author -->
+            <div class="mb-3">
+                <label for="author" class="form-label">Author</label>
+                <input type="text" name="author" id="author" class="form-control" required>
+            </div>
+            
+            <!-- Category Key (Dropdown from DB) -->
+            <div class="mb-3">
+                <label for="category_key" class="form-label">Category Key</label>
+                <select name="category_key" id="category_key" class="form-control">
+                    <option value="">Select Category</option>
+                    {% for category in categories %}
+                        <option value="{{ category.category_key }}">{{ category.category_key }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <!-- OR: Option to Create a New Category -->
+            <div class="mb-3">
+                <label for="new_category_key" class="form-label">Or, Create New Category</label>
+                <input type="text" name="new_category_key" id="new_category_key" class="form-control" placeholder="Enter new category key (if any)">
+            </div>
+
+            <!-- Book Image -->
+            <div class="mb-3">
+                <label for="image" class="form-label">Book Image</label>
+                <input type="file" name="image" id="image" class="form-control" accept="image/*">
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-success">Add Book</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+ 
+        body {
+            background: url('https://img.freepik.com/premium-photo/defocused-office-background-blurred-background-generative-ai_861171-832.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            overflow: hidden;
+
+        }
+
+        .header {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px 20px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1{
+            size: .5em;
+        }
+
+        .logout-btn {
+            background-color: #747978;
+            color: #fff;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .logout-btn:hover {
+            background-color: #1a8294;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .cards-container {
+            margin-top: 90px;
+        }
+
+        .card {
+            top: -35px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            height: 95%; 
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .card img {
+            height: 200px; 
+            object-fit: cover; 
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .card-title {
+            font-weight: bold;
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        a.card {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .card-body h5 {
+            color: black;
+        }

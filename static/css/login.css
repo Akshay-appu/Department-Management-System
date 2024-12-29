@@ -1,0 +1,81 @@
+body {
+    background-image: url('/static/images/login2.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(2px); 
+    padding: 30px;
+    max-width: 400px;
+    width: 100%;
+    color: #ffffff;
+}
+
+h2 {
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #00509e;
+    border: none;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.btn-primary:hover {
+    background-color: #003366;
+}
+
+a {
+    color: #00509e;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #003366;
+}
+
+.custom-back-button {
+    background-color: #ffffff;
+    color: #00509e;
+    border: none;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: bold;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.custom-back-button:hover {
+    background-color: #555657;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}

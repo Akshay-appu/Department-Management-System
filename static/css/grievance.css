@@ -1,0 +1,66 @@
+/* Grievance Page Styles */
+.grievance-container {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.grievance-header {
+    text-align: center;
+    color: #d9534f;
+    margin-bottom: 20px;
+}
+
+.grievance-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.grievance-form input,
+.grievance-form textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.grievance-form input:focus,
+.grievance-form textarea:focus {
+    border-color: #d9534f;
+    outline: none;
+}
+
+.grievance-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.grievance-form button {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.grievance-form button:hover {
+    background-color: #c9302c;
+}
+
+.grievance-message {
+    text-align: center;
+    font-size: 16px;
+    color: #5bc0de;
+}
+
+.grievance-footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #777;
+}

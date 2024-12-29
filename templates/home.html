@@ -1,0 +1,236 @@
+{% load static %}
+{% block content %}
+{% include 'header.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+    <main class="hero" id="home">
+        <div class="center-content">
+            <h1 class="holographic-title">Royal College of Engineering</h1>
+            <p class="subtitle">Shaping Tomorrow's Innovation</p>
+        </div>
+
+        <div class="nav-grid">
+            <a href="{% url 'campus' %}" class="nav-item text-decoration-none">
+                <div class="icon-circle">
+                    <i class="fas fa-university"></i>
+                </div>
+                <h3>Campus Life</h3>
+                <p>Experience innovation daily</p>
+            </a>
+            <a href="{% url 'courses' %}" class="nav-item text-decoration-none">
+                <div class="icon-circle">
+                    <i class="fas fa-book"></i>
+                </div>
+                <h3>Courses</h3>
+                <p>Explore our wide range of programs</p>
+            </a>
+            <a href="{% url 'admission' %}" class="nav-item text-decoration-none">
+                <div class="icon-circle">
+                    <i class="fas fa-edit"></i>
+                </div>
+                <h3>Admission</h3>
+                <p>Join our community of innovators</p>
+            </a>
+            <a href="{% url 'home_library' %}" class="nav-item text-decoration-none">
+                <div class="icon-circle">
+                    <i class="fas fa-book-reader"></i>
+                </div>
+                <h3>Library</h3>
+                <p>Access knowledge and resources</p>
+            </a>
+        </div>
+        
+        
+    </main>
+
+    <!-- About Section -->
+    <section class="about-section bg-light py-5" id="about">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="display-4">About Royal College of Engineering</h2>
+                <p class="lead text">A legacy of innovation, excellence, and a commitment to shaping the future.</p>
+                <hr class="my-4" />
+            </div>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h3>Our Vision</h3>
+                    <p>At Royal College of Engineering, we envision a world where technology and education converge to shape the leaders of tomorrow. Our mission is to provide cutting-edge programs that equip students with the skills and knowledge to excel in their careers and contribute meaningfully to society.</p>
+                </div>
+                <div class="col-md-6">
+                    <h3>Our History</h3>
+                    <p>Founded in 1975, Royal College of Engineering has consistently pushed the boundaries of academic excellence. Our rich history is marked by innovations, pioneering research, and a commitment to developing students who are not just learners but creators of new possibilities.</p>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-4">
+                    <h3 class="text-warning">State-of-the-Art Facilities</h3>
+                    <p>Our campus boasts modern classrooms, laboratories, and innovation hubs designed to foster creativity and practical learning.</p>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="text-warning">Innovative Programs</h3>
+                    <p>We offer a diverse range of programs tailored to meet the needs of the modern workforce. From AI to Business Administration, we prepare students for the future.</p>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="text-warning">Global Network</h3>
+                    <p>Our international partnerships with leading universities and industries ensure that our students have access to global opportunities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ <!-- Events Section -->
+ <section class="events-section py-5 bg-white">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="display-4 mb-4 text-warning">Upcoming Events & Announcements</h2>
+            <p class="lead">Stay updated on the latest events and key dates at Royal College of Engineering.</p>
+            <hr class="my-4" />
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+            <div class="col">
+                <div class="card h-100 event-item">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Science & Technology Fair</h5>
+                        <p class="card-text">An exhibition of innovative projects and research from our talented students and faculty. Don't miss the latest in science and tech advancements!</p>
+                        <p><strong>Date:</strong> March 15, 2025</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 event-item">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Guest Lecture Series</h5>
+                        <p class="card-text">Join industry leaders as they share insights on emerging trends and technologies in various fields.</p>
+                        <p><strong>Date:</strong> April 5, 2025</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 event-item">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Annual Sports Meet</h5>
+                        <p class="card-text">Showcase your athletic talents and cheer for your friends at this exciting event.</p>
+                        <p><strong>Date:</strong> April 22, 2025</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Section -->
+<section class="gallery-section py-5 bg-light">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="display-4 text-warning">Campus Gallery</h2>
+            <p class="lead text-muted">A glimpse of our vibrant campus life and innovation in action.</p>
+            <hr class="my-4" />
+        </div>
+        
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card h-100 gallery-item">
+                    <img src="https://media.istockphoto.com/id/1756562035/photo/university-campus.jpg?s=612x612&w=0&k=20&c=Y_t_Pnrx4HF1GOFOFCgbztuwAkF8HGZMUk756mSnK8k=" class="card-img-top" alt="Campus Harmony">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning">Campus Harmony</h5>
+                        <p class="card-text">Discover a thriving campus environment that inspires learning, creativity, and lifelong friendships.</p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col">
+
+                <div class="card h-100 gallery-item">
+                    <img src="https://plus.unsplash.com/premium_photo-1680807869624-07b389d623e8?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHVzfGVufDB8fDB8fHww"  class="card-img-top" alt="Classrooms & Labs">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning">Classrooms & Labs</h5>
+                        <p class="card-text">Equipped with modern tools, our classrooms and labs offer the best hands-on experience.</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col">
+                <div class="card h-100 gallery-item">
+                    <img src="https://media.istockphoto.com/id/1456729829/photo/young-friends-taking-a-break-between-college-classes.jpg?s=612x612&w=0&k=20&c=s8CzLEtuQeeIoKlz09ICdCWLVpZ9tuwPWV24GgeWzsY="  class="card-img-top" alt="Campus Events">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning">Campus Events</h5>
+                        <p class="card-text">The Royal College campus is full of life with events that celebrate creativity and innovation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer-section bg-dark text-light py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <h2>ROYAL <span class="text-warning">COLLEGE</span></h2>
+                <p>Empowering minds, shaping futures. At Royal College, we provide an inclusive environment that fosters growth, innovation, and a commitment to academic excellence.</p>
+                <h4>Follow Us</h4>
+                <div class="social-icons mt-3">
+                    <a href="#" class="text-light me-3"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="text-light me-3"><i class="fa-brands fa-snapchat"></i></a>
+                    <a href="#" class="text-light me-3"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#" class="text-light me-3"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="text-light"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h4>Contact Us</h4>
+                <p><i class="fa-solid fa-location-dot text-warning"></i>  Vazhayur, Malappuram, India</p>
+                <p><i class="fa-solid fa-envelope text-warning"></i>  contact@royalcollege.edu</p>
+                <p><i class="fa-solid fa-phone text-warning"></i> 0494 234561, 9947791584</p>
+            </div>
+            <div class="col-md-4">
+                <h4>Enquiries</h4>
+                <form class="contact-form" action="{% url 'enquiry' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="mb-2">
+                        <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="mb-2">
+                        <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="mb-2">
+                        <textarea class="form-control" name="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-warning text-white w-100">Send Message</button>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Lightbox functionality (optional)
+    const images = document.querySelectorAll('.gallery-item img');
+    const modal = new bootstrap.Modal(document.getElementById('imageModal'));
+    const modalImage = document.getElementById('modalImage');
+
+    images.forEach(img => {
+        img.addEventListener('click', () => {
+            modalImage.src = img.src;
+            modal.show();
+        });
+    });
+</script>
+</body>
+</html>
+
+{% endblock %}

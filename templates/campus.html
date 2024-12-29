@@ -1,0 +1,235 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Campus Life</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        /* Body Styling */
+        body {
+            background: linear-gradient(to right, #00416A, #E4E5E6);
+            color: #333;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Navbar Styling */
+        nav {
+            background-color: #00416A;
+            color: white;
+        }
+        nav a {
+            color: white;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #E4E5E6;
+        }
+
+        /* Header Section */
+        .header {
+            text-align: center;
+            padding: 60px 0;
+            color: white;
+           /*   background: url('https://images.pexels.com/photos/1181303/pexels-photo-1181303.jpeg') center/cover no-repeat;*/
+            background-attachment: fixed;
+            position: relative;
+        }
+        .header h1 {
+            font-size: 50px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        .header p {
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+        /* Faculty Section */
+        .faculty-section {
+            padding: 80px 0;
+            background-color: #F7F9FC;
+        }
+        .faculty-section h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #00416A;
+        }
+        .faculty-card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        .faculty-card img {
+            border-radius: 10px 10px 0 0;
+        }
+        .faculty-card .card-body {
+            background-color: #fff;
+            padding: 30px;
+            text-align: center;
+            border-radius: 0 0 10px 10px;
+        }
+        .faculty-card .card-title {
+            font-size: 22px;
+            font-weight: 600;
+            color: #00416A;
+        }
+        .faculty-card .card-text {
+            font-size: 16px;
+            font-weight: 300;
+            color: #777;
+        }
+
+        /* Campus Life Section */
+        .campus-life-section {
+            padding: 80px 0;
+        }
+        .campus-life-section h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #00416A;
+        }
+        .campus-life-img {
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .campus-life-img:hover {
+            transform: scale(1.05);
+        }
+        .campus-life-description {
+            font-size: 18px;
+            font-weight: 300;
+            color: #555;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Footer Styling */
+        .footer {
+            background-color: #00416A;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar  -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">Royal College</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/homepage/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#faculty">Faculty</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#campus-life">Campus Life</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#extracurricular">Extracurricular</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <div class="header">
+        <h1>Welcome to Our Campus</h1>
+        <p>Explore the vibrant academic life, our passionate faculty, and the engaging campus atmosphere</p>
+    </div>
+
+    <!-- Faculty Section -->
+    <section class="faculty-section" id="faculty">
+        <h2>Meet Our Esteemed Faculty</h2>
+        <div class="container">
+            <div class="row">
+                <!-- Faculty 1 -->
+                <div class="col-md-4">
+                    <div class="card faculty-card">
+                        <img src="https://media.istockphoto.com/id/1414062383/photo/smiling-young-indian-business-man-wearing-suit-standing-in-office-portrait.jpg?s=612x612&w=0&k=20&c=YIEVv4Yxs4qbx0QxITDr7EDaW0tw_460oVFFnn1Q2xc=" class="card-img-top" alt="Faculty 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Dr. Abraham Verghese</h5>
+                            <p class="card-text">Professor of Computer Science with expertise in Artificial Intelligence.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Faculty 2 -->
+                <div class="col-md-4">
+                    <div class="card faculty-card">
+                        <img src="https://img.freepik.com/premium-photo/happy-successful-rich-young-indian-business-man-ceo-leader-wealthy-arab-professional-manager-confident-male-businessman-executive-wearing-suit-sitting-chair-isolated-beige-vertical-portrait_1254992-226595.jpg" class="card-img-top" alt="Faculty 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Dr. Arjun Nair</h5>
+                            <p class="card-text">Associate Professor of Mathematics, specializing in advanced calculus.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Faculty 3 -->
+                <div class="col-md-4">
+                    <div class="card faculty-card">
+                        <img src="https://as2.ftcdn.net/v2/jpg/06/64/37/13/1000_F_664371387_HKDk3gl9zGBjGEr3NiQsE1rTrOATXhFA.jpg" class="card-img-top" alt="Faculty 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Prof. Meera Varma</h5>
+                            <p class="card-text">Lecturer in Physics, focusing on Quantum Mechanics and Astrophysics.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Campus Life Section -->
+    <section class="campus-life-section" id="campus-life">
+        <h2>Experience Our Beautiful Campus</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="https://img.freepik.com/premium-photo/beautiful-architecture-st-john-s-college-cambridge_1339-88132.jpg?ga=GA1.1.2028577814.1733061907&semt=ais_hybrid" class="campus-life-img img-fluid" alt="Campus Image 1">
+                    <p class="campus-life-description">Campus Courtyard</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="https://img.freepik.com/premium-photo/building-space_664434-8086.jpg?ga=GA1.1.2028577814.1733061907&semt=ais_hybrid" class="campus-life-img img-fluid" alt="Campus Image 2">
+                    <p class="campus-life-description">Student Activity Center</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="https://img.freepik.com/premium-photo/people-field-against-sky_1048944-23357289.jpg?ga=GA1.1.2028577814.1733061907&semt=ais_hybrid" class="campus-life-img img-fluid" alt="Campus Image 3">
+                    <p class="campus-life-description">Sports Ground</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Extracurricular Section -->
+    <section class="extracurricular-section" id="extracurricular">
+        <div class="container">
+            <h2>Extracurricular Activities</h2>
+            <ul>
+                <li>Robotics Club</li>
+                <li>Literature Society</li>
+                <li>Sports Teams (Football, Basketball, etc.)</li>
+                <li>Cultural Festivals</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>&copy; 2024 Royal College. All rights reserved.</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

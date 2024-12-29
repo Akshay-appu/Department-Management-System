@@ -1,0 +1,155 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 600;
+}
+
+/* Header Section */
+
+.header-section {
+    background: linear-gradient(to right, #007bff, #6c757d);
+    color: white;
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+.header-buttons .btn-success {
+    background-color: #1458be; /* Bootstrap success color */
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.header-buttons .btn-success:hover {
+    background-color: #f82727; /* Slightly darker green for hover */
+}
+
+
+.header-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.header-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.header-buttons .btn {
+    margin: 0 10px;
+    font-size: 1.1rem;
+    padding: 0.75rem 2rem;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.header-buttons .btn-outline-light {
+    border: 2px solid white;
+}
+
+.header-buttons .btn-warning {
+    background-color: #fff8f8;
+    color: rgb(0, 0, 0);
+    border: none;
+}
+
+.header-buttons .btn-warning:hover {
+    background-color: #e0a800;
+}
+
+/* Course Catalog Section */
+.course-card {
+    background: #fff;
+    padding: 2rem ;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space between elements */
+    height: 100%; /* Ensures equal height */
+}
+
+.col-md-4 {
+    margin-bottom: 2rem; /* Adds space between each column */
+}
+
+
+.course-card h3 {
+    font-size: 1.75rem;
+    color: #007bff;
+}
+
+.course-card p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.course-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.course-card ul li {
+    margin: 0.5rem 0;
+}
+
+.course-card .btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.course-card .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* About Section */
+.about-section {
+    background: #f1f3f5;
+    padding: 3rem 1rem;
+}
+
+.about-section h2 {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+.about-section p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 3rem;
+}
+
+.about-section .fa {
+    color: #007bff;
+}
+
+/* Footer Section */
+.footer-section {
+    background-color: #343a40;
+    color: white;
+    padding: 2rem;
+}
+
+.footer-section p {
+    font-size: 1.1rem;
+}
+
+.footer-section .fa {
+    margin-right: 10px;
+}
