@@ -40,11 +40,11 @@ A Django-based web application designed for managing various college functionali
 
 - **Library Books**
 - 
-  ![Library Books](images/library_books.png)
+  ![Library Books](images/library_book.png)
 
 - **Courses**
 - 
-  ![Course Planning](images/course.png)
+  ![Course Planning](images/courses.png)
 
 - **Grievance Submit**
 - 
