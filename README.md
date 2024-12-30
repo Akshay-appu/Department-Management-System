@@ -3,7 +3,7 @@
 A Django-based web application designed for managing various college functionalities, including student admissions, faculty management, library management, course planning, and grievance handling. The system integrates AI-powered attendance monitoring and provides an interactive interface for both administrative staff and faculty.
 
 - **Main View**:  
-  ![Homepage Main](images/homepage_main.png)  
+  ![Homepage Main](images/homepage.png)  
 - **About Section**:  
   ![About Section](images/about.png)  
 - **Courses Offered**:  
