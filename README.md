@@ -2,13 +2,17 @@
 
 A Django-based web application designed for managing various college functionalities, including student admissions, faculty management, library management, course planning, and grievance handling. The system integrates AI-powered attendance monitoring and provides an interactive interface for both administrative staff and faculty.
 
-- **Main View**:  
+- **Main View**:
+- 
   ![Homepage Main](images/homepage.png)  
-- **About Section**:  
+- **About Section**:
+- 
   ![About Section](images/about.png)  
-- **Courses Offered**:  
+- **Courses Offered**:
+- 
   ![Courses Offered](images/courses.png)  
-- **Footer Section**:  
+- **Footer Section**:
+- 
   ![Footer Section](images/footer.png) 
 
 ## Features
@@ -22,28 +26,36 @@ A Django-based web application designed for managing various college functionali
 - **Admin Dashboard**: An intuitive interface for managing the entire system with ease.
 
 
-- **Student Dashboard**  
+- **Student Dashboard**
+-  
   ![Student Dashboard](images/student_dashboard.png)
 
-- **Faculty Dashboard**  
+- **Faculty Dashboard**
+- 
   ![Faculty Dashboard](images/faculty_dashboard.png)
 
-- **Library Management Overview**  
+- **Library Management Overview**
+- 
   ![Library Overview](images/library_ovv.png)
 
-- **Library Books**  
+- **Library Books**
+- 
   ![Library Books](images/library_books.png)
 
-- **Courses**  
+- **Courses**
+- 
   ![Course Planning](images/course.png)
 
-- **Grievance Submit**  
+- **Grievance Submit**
+- 
   ![Grievance Submit](images/grievance_submit.png)
 
-- **Attendance Management**  
+- **Attendance Management**
+- 
   ![Attendance Management](images/attendance_management.png)
 
-- **Admin Dashboard**  
+- **Admin Dashboard**
+- 
   ![Admin Dashboard](images/admin_dashboard.png)
 
 ## Installation
