@@ -1,6 +1,6 @@
 # College Management System
 
-A Django-based web application designed for managing various college functionalities, including student admissions, faculty management, library management, course planning, and grievance handling. The system integrates AI-powered attendance monitoring and provides an interactive interface for both administrative staff and faculty.
+A Django-based web application designed for managing various college functionalities, including student admissions, faculty management, library management, course planning, and grievance handling. The system provides interactive interface for both administrative staff and faculty.
 
 - **Main View**:
 - 
