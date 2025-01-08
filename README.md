@@ -17,8 +17,8 @@ A Django-based web application designed for managing various college functionali
 
 ## Features
 
-- **Student Management**: Add, edit, and manage student records, including academic details, attendance, certificates, and fees.
-- **Faculty Management**: Manage faculty details, salary, attendance, and course planning.
+- **Student Dashboard**: View student's academic details, attendance, certificates, fees and submit grievence.
+- **Faculty Dashboard**: Manage faculty details, salary, attendance, handle grievence and course planning also student attendance and acdemics.
 - **Library Management**: Track and manage library books and their availability.
 - **Course Planning**: Manage courses offered and assign faculty.
 - **Grievance Management**: Handle student and faculty grievances.
