@@ -2,8 +2,8 @@ asgiref==3.8.1
 Django==5.1.3
 gunicorn
 django-environ==0.11.0
-numpy==1.26.4
-pandas==2.2.1
+numpy>=2.0.1
+pandas>=2.2.3
 psycopg==3.2.3
 psycopg2==2.9.10
 python-dateutil==2.9.0.post0
